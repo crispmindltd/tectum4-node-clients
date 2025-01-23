@@ -72,16 +72,12 @@ namespace Tectum.PublicBlockChainClient
             return GetAsync<GetBlocksCountResponse>("blockscount", new Dictionary<string, string>(), cancellationToken);
         }
 
-    
+
         public Task<KeyRecoverResponse?> KeyRecoverAsync(KeyRecoverRequest request,
             CancellationToken cancellationToken = default)
         {
             return SendRequestAsync<KeyRecoverResponse>("keys/recover", HttpMethod.Post, request,
                 cancellationToken);
         }
-
-       
-
-       
     }
 }
