@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tectum.PublicBlockChainClient", "src\Tectum.PublicBlockChainClient.csproj", "{82B3CA31-1BAE-4D0F-957E-6E457773549F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7187335B-35B6-4FED-A17A-D923957AA4CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82B3CA31-1BAE-4D0F-957E-6E457773549F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82B3CA31-1BAE-4D0F-957E-6E457773549F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82B3CA31-1BAE-4D0F-957E-6E457773549F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82B3CA31-1BAE-4D0F-957E-6E457773549F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82B3CA31-1BAE-4D0F-957E-6E457773549F} = {7187335B-35B6-4FED-A17A-D923957AA4CA}
+	EndGlobalSection
+EndGlobal
