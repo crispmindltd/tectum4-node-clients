@@ -1,21 +1,22 @@
 ## Endpoints ##
 
-The Light Node supports the following types of requests:
+The Validator Node supports the following types of requests:
 
-### TET operations: ###
+### Coins operations: ###
 
--   **[GET /coins/balances](https://github.com/crispmindltd/light_node_tectum/tree/main/docs/tet_coin_balance_request.md)**: Retrieve balances for multiple tokens
--   **[POST /coins/transfer](https://github.com/crispmindltd/light_node_tectum/tree/main/docs/tet_transfer_request.md)**: Transfer TET coins from one wallet to another.
--   **[GET /coins/transfers](https://github.com/crispmindltd/light_node_tectum/tree/main/docs/coin_transfer_transactions.md)**: Retrieve TET transfer history
--   GET /coins/transfers/user: Retrieve TET transfer history for user
--   GET /coins/transfers/fee: Retrieve fee for transfer
-
+-   **[POST /coins/transfer](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/coins_transfer_request.md)**: To transfer tokens between two addresses
+-   **[POST /coins/stake](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/coins_stake_request.md)**: Staking tokens to become a network validator
 
 ### Key management: ###
 
--   **[POST /keys/recover](https://github.com/crispmindltd/light_node_tectum/tree/main/docs/keys_recovery_request.md)**: Recover keys using a seed phrase
--   **[GET /keys/public/byskey](https://github.com/crispmindltd/light_node_tectum/tree/main/docs/public_key_by_skey_request.md)**: Retrieve the public key by session key
+-   **[GET /keys/new](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/keys_generate_request.md)**: Generate a private/public key pair
+-   **[POST /keys/recover](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/keys_recovery_request.md)**: Recover keys using a seed phrase
+
+### Settings: ###
+
+-   **[GET /version](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/version_request.md)**: View node version
 
 ### Blocks: ###
 
 -   GET /blockscount: Retrieve count of blocks
+
