@@ -14,10 +14,9 @@
         <PackageTags>Tectum 4.0, Public Blockchain</PackageTags>
         <Authors>Crispmind LTD</Authors>
         <Company>https://tectum.io/tectum-blockchain/</Company>
-        <FileVersion>1.0.100</FileVersion>
-        <Version>1.0.100</Version>
-        <PackageVersion>1.0.100</PackageVersion>
-
+        <FileVersion>1.0.102</FileVersion>
+        <Version>1.0.102</Version>
+        <PackageVersion>1.0.102</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -30,10 +29,10 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Include="..\README.md" Pack="true" PackagePath="\">
-        <Link>README.md</Link>
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </Content>
+        <Content Include="..\README.md" Pack="true" PackagePath="\">
+            <Link>README.md</Link>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
     </ItemGroup>
 
 

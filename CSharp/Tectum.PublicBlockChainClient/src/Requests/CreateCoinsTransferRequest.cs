@@ -1,22 +1,38 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Tectum.PublicBlockChainClient.Requests
+namespace Tectum.PublicBlockChainClient.Requests;
+
+/// <summary>
+/// Create coin
+/// </summary>
+public sealed class CreateCoinsTransferRequest
 {
-    public class CreateCoinsTransferRequest
+    public CreateCoinsTransferRequest(string fromAddress, string toAddress, long amount, string privateKey)
     {
-        [JsonPropertyName("session_key")] 
-        public string SessionKey { get; set; } = null!;
-
-        /// <summary>
-        /// Address reciever
-        /// </summary>
-        [JsonPropertyName("to")]
-        public string AddressTo { get; set; } = null!;
-
-        /// <summary>
-        /// Transaction amount
-        /// </summary>
-        [JsonPropertyName("amount")]
-        public double Amount { get; set; }
+        FromAddress = fromAddress;
+        ToAddress = toAddress;
+        Amount = amount;
+        PrivateKey = privateKey;
     }
+
+    [JsonPropertyName("from")] 
+    public string FromAddress { get; }
+
+    /// <summary>
+    /// Address reciever
+    /// </summary>
+    [JsonPropertyName("to")]
+    public string ToAddress { get; }
+
+    /// <summary>
+    /// Transaction amount
+    /// </summary>
+    [JsonPropertyName("amount")]
+    public long Amount { get; }
+    
+    /// <summary>
+    /// Address reciever
+    /// </summary>
+    [JsonPropertyName("private_key")]
+    public string PrivateKey { get; }
 }

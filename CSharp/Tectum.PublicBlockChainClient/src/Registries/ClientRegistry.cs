@@ -8,7 +8,7 @@ namespace Tectum.PublicBlockChainClient.Registries
 {
     public static class ClientRegistry
     {
-        public static IServiceCollection AddLiteNodeClient(this IServiceCollection services,
+        public static IServiceCollection AddPublicBlockChainClient(this IServiceCollection services,
             IConfiguration configuration,
             string configName = "TectumLNodeClientConfig")
         {
