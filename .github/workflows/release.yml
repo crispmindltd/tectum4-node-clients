@@ -33,17 +33,17 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore CSharp/Tectum.PublicBlockChainClient
 
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore CSharp/Tectum.PublicBlockChainClient
       
     # Execute all unit tests in the solution
     - name: Execute unit tests
-      run: dotnet test --configuration Release --no-build
+      run: dotnet test --configuration Release --no-build CSharp/Tectum.PublicBlockChainClient
 
     - name: Create pack
-      run: dotnet pack --configuration Release --no-build --output .
+      run: dotnet pack --configuration Release --no-build --output . CSharp/Tectum.PublicBlockChainClient
            
     - name: Push nuget.org
       run: dotnet nuget push *.nupkg --api-key ${NUGET_TOKEN} --source https://api.nuget.org/v3/index.json --skip-duplicate
