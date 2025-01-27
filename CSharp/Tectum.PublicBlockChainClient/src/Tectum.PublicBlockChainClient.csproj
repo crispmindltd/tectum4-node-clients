@@ -14,9 +14,9 @@
         <PackageTags>Tectum 4.0, Public Blockchain</PackageTags>
         <Authors>Crispmind LTD</Authors>
         <Company>https://tectum.io/tectum-blockchain/</Company>
-        <FileVersion>1.0.102</FileVersion>
-        <Version>1.0.102</Version>
-        <PackageVersion>1.0.102</PackageVersion>
+        <FileVersion>1.0.103</FileVersion>
+        <Version>1.0.103</Version>
+        <PackageVersion>1.0.103</PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
