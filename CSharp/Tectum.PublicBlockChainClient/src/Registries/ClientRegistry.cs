@@ -12,7 +12,7 @@ namespace Tectum.PublicBlockChainClient.Registries
             IConfiguration configuration,
             string configName = "TectumLNodeClientConfig")
         {
-            services.Configure<PublicBlockChainClient>(configuration.GetSection(configName).Bind);
+            services.Configure<PublicBlockChainClientConfig>(configuration.GetSection(configName).Bind);
             services
                 .AddHttpClient<IPublicBlockChainClient, PublicBlockChainClient>(
                     (client, service) =>
