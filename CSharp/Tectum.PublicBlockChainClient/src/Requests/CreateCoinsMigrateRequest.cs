@@ -3,18 +3,18 @@
 namespace Tectum.PublicBlockChainClient.Requests;
 
 /// <summary>
-/// Create coin transaction
+/// Create migrate transaction
 /// </summary>
-public sealed class CreateCoinsTransferRequest
+public class CreateCoinsMigrateRequest
 {
-    public CreateCoinsTransferRequest(string fromAddress, string toAddress, long amount, string privateKey)
+    public CreateCoinsMigrateRequest(string fromAddress, string toAddress, long amount, string privateKey)
     {
         FromAddress = fromAddress;
         ToAddress = toAddress;
         Amount = amount;
         PrivateKey = privateKey;
     }
-
+    
     [JsonPropertyName("from")] 
     public string FromAddress { get; }
 

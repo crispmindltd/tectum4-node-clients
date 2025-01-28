@@ -1,9 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Globalization;
-using System.Net.Http;
-using System.Text.Json;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
 using Tectum.PublicBlockChainClient.Requests;
 using Tectum.PublicBlockChainClient.Responses;
 using Tectum.TectumLNodeClient.Requests;
@@ -36,6 +31,11 @@ namespace Tectum.PublicBlockChainClient
         {
             return SendRequestAsync<CreateCoinsTransferResponse>("coins/transfer", HttpMethod.Post, request,
                 cancellationToken);
+        }
+
+        public Task<CreateCoinsMigrateResponse?> CreateCoinMigrateAsync(CreateCoinsMigrateRequest request, CancellationToken cancellationToken = default)
+        {
+            return SendRequestAsync<CreateCoinsMigrateResponse>("coins/migrate", HttpMethod.Post, request, cancellationToken);
         }
 
         public Task<GetCoinsTransfersResponse?> GetCoinTransfersAsync(GetCoinsTransfersRequest request,
