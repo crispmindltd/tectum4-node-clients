@@ -34,6 +34,18 @@ namespace Tectum.PublicBlockChainClient
             CancellationToken cancellationToken = default);
 
         /// <summary>
+        /// Create migrate transaction of TET coin: POST /coins/migrate
+        /// When using this transaction you need undestend one of member transaction
+        /// will be owner of coin
+        /// </summary>
+        /// <param name="request">Data of transaction</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns>Hash of success transaction</returns>
+        Task<CreateCoinsMigrateResponse?> CreateCoinMigrateAsync(
+            CreateCoinsMigrateRequest request,
+            CancellationToken cancellationToken = default);
+        
+        /// <summary>
         /// Get list of transactions of TET coin: GET /coins/transfers
         /// </summary>
         /// <param name="request">Filter options</param>
