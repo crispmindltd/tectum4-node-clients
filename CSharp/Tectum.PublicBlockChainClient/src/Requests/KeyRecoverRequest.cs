@@ -1,10 +1,9 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Tectum.TectumLNodeClient.Requests
+namespace Tectum.PublicBlockChainClient.Requests;
+
+public class KeyRecoverRequest
 {
-    public class KeyRecoverRequest
-    {
-        [JsonPropertyName("seed_phrase")]
-        public string SessionPhrase { get; set; } = null!;
-    }
+    [JsonPropertyName("seed_phrase")]
+    public string SessionPhrase { get; set; } = null!;
 }

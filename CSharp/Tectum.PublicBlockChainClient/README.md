@@ -4,8 +4,11 @@ The Validator Node supports the following types of requests:
 
 ### Coins operations: ###
 
--   **[POST /coins/transfer](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/coins_transfer_request.md)**: To transfer tokens between two addresses
--   **[POST /coins/stake](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/coins_stake_request.md)**: Staking tokens to become a network validator
+-   **[POST /coins/transfer](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/coins_transfer_request.md)**: To transfer tokens between two addresses (`IPublicBlockChainClient.CreateCoinTransferAsync`) 
+-   **[GET /coins/balance/byaddress](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/token_balance_request.md)**: Retrieve TET balance by address (`IPublicBlockChainClient.GetCoinBalancesAsync`)
+-   **[GET /coins/transfers](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/token_transfer_history.md)**: Retrieve the transfer history for the TET (`IPublicBlockChainClient.GetCoinTransfersAsync`)
+-   **[GET /coins/transfers/user](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/tet_transfer_history_user.md)**: Retrieve the TET transfer history for a specific user (`IPublicBlockChainClient.GetCoinTransfersUserAsync`)
+-   **POST /coins/migrate**: Migrate TET to new address (`IPublicBlockChainClient.CreateCoinMigrateAsync`)
 
 ### Key management: ###
 
