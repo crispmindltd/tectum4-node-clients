@@ -1,13 +1,12 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace Tectum.TectumLNodeClient.Requests
+namespace Tectum.PublicBlockChainClient.Requests;
+
+/// <summary>
+/// GET /coins/balances: Retrieve balances for multiple tokens
+/// </summary>
+public class GetCoinsBalancesRequest
 {
-    /// <summary>
-    /// GET /coins/balances: Retrieve balances for multiple tokens
-    /// </summary>
-    public class GetCoinsBalancesRequest
-    {
-        [JsonPropertyName("tet_address")]
-        public string AddressTet { get; set; } = null!;
-    }
+    [JsonPropertyName("address")]
+    public string Address { get; set; } = null!;
 }

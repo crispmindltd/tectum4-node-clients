@@ -4,8 +4,9 @@ The Validator Node supports the following types of requests:
 
 ### Coins operations: ###
 
--   **[POST /coins/transfer](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/coins_transfer_request.md)**: To transfer tokens between two addresses
+-   **[POST /coins/transfer](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/coins_transfer_request.md)**: To transfer coins between two addresses
 -   **[POST /coins/stake](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/coins_stake_request.md)**: Staking tokens to become a network validator
+-   **[POST /coins/migrate](https://github.com/crispmindltd/tectum4-node-validator/tree/main/docs/coins_migrate_request.md)**: To migrate coins to new address
 
 ### Key management: ###
 
