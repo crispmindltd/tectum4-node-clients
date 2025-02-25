@@ -48,6 +48,16 @@ public class PublicBlockChainClient : BaseHttpClient, IPublicBlockChainClient
         return GetAsync<GetCoinsTransfersResponse>("coins/transfers", param, cancellationToken);
     }
 
+    public Task<GetCoinTransferResponse?> GetCoinTransferAsync(long id,
+        CancellationToken cancellationToken = default)
+    {
+        var param = new Dictionary<string, string>
+        {
+            { "id", id.ToString() }
+        };
+        return GetAsync<GetCoinTransferResponse>("coins/transfer", param, cancellationToken);
+    }
+
     public Task<GetCoinsTransfersResponse?> GetCoinTransfersUserAsync(GetCoinsTransfersUserRequest request,
         CancellationToken cancellationToken = default)
     {

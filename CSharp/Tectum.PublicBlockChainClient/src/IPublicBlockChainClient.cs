@@ -53,6 +53,17 @@ public interface IPublicBlockChainClient
         CancellationToken cancellationToken = default);
 
     /// <summary>
+    /// Get full information of transaction: GET /coins/transfers/{id}
+    /// </summary>
+    /// <param name="id">Number transaction</param>
+    /// <param name="cancellationToken"></param>
+    /// <returns>List of transactions</returns>
+    Task<GetCoinTransferResponse?> GetCoinTransferAsync(
+        long id,
+        CancellationToken cancellationToken = default);
+
+
+    /// <summary>
     /// Get list of transactions of TET coin: GET /coins/transfers/user
     /// </summary>
     /// <param name="request">Filter options</param>
