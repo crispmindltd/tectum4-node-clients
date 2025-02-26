@@ -78,7 +78,7 @@ public class PublicBlockChainClient : BaseHttpClient, IPublicBlockChainClient
 
     public Task<GetBlocksCountResponse?> GetBlocksCountAsync(CancellationToken cancellationToken = default)
     {
-        return GetAsync<GetBlocksCountResponse>("blockscount", new Dictionary<string, string>(), cancellationToken);
+        return GetAsync<GetBlocksCountResponse>("blockscount", null, cancellationToken);
     }
 
 

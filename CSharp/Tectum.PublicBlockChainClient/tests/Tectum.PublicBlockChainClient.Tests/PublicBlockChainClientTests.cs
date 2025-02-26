@@ -22,12 +22,12 @@ public class PublicBlockChainClientTests
     }
 
     [Ignore("Need using real Tectum 4.0 Node")]
-    [Test]
-    public async Task GetCoinBalancesAsync_Success()
+    [TestCase("0xe38465d9ea628bbe533067e0395f66212b723873")]
+    public async Task GetCoinBalancesAsync_Success(string address)
     {
         var result = await _publicBlockChain.GetCoinBalancesAsync(new GetCoinsBalancesRequest
         {
-            Address = "0xe38465d9ea628bbe533067e0395f66212b723873"
+            Address = address
         });
 
         result.Should().NotBeNull();
@@ -52,7 +52,7 @@ public class PublicBlockChainClientTests
         AssetTransactions(result.Transactions!);
     }
 
-    //[Ignore("Need using real Tectum 4.0 Node")]
+    [Ignore("Need using real Tectum 4.0 Node")]
     [TestCase(12)]
     public async Task GetCoinTransferAsync_Success(long blockId)
     {
@@ -86,6 +86,17 @@ public class PublicBlockChainClientTests
             validator.Sign.Should().NotBeNullOrWhiteSpace();
             validator.Sign.Length.Should().Be(144);
         }
+    }
+
+    [Ignore("Need using real Tectum 4.0 Node")]
+    [Test]
+    public async Task GetBlocksCountAsync_Success()
+    {
+        var result = await _publicBlockChain.GetBlocksCountAsync();
+
+        result.Should().NotBeNull();
+        result.HasError.Should().BeFalse();
+        result.BlocksCount.Should().BeGreaterThan(15);
     }
 
     private void AssetTransactions(List<CoinTransferDto> transactions)

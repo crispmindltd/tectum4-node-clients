@@ -79,8 +79,18 @@ public interface IPublicBlockChainClient
     /// </summary>
     /// <param name="cancellationToken"></param>
     /// <returns>Fee of transaction</returns>
-    Task<GetCoinsTransferFeeResponse?> GetCoinTransferFeeAsync(
-        CancellationToken cancellationToken = default);
+    Task<GetCoinsTransferFeeResponse?> GetCoinTransferFeeAsync(CancellationToken cancellationToken = default);
+
+    #endregion
+
+    #region block
+
+    /// <summary>
+    /// Get count of blocks into blockchain: GET /blockscount
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns>Number of blocks</returns>
+    Task<GetBlocksCountResponse?> GetBlocksCountAsync(CancellationToken cancellationToken = default);
 
     #endregion
 }
