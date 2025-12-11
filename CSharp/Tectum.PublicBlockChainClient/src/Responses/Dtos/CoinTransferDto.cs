@@ -45,4 +45,15 @@ public sealed class CoinTransferDto
     /// Fee
     /// </summary>
     public decimal Fee { get; set; }
+    
+    /// <summary>
+    /// Number
+    /// </summary>
+    public long No { get; set; }
+    
+    /// <summary>
+    /// Transaction Type
+    /// mint, burn, transfer, stake, unstake, migrate, validate, validate4, block
+    /// </summary>
+    public string? Type { get; set; }
 }

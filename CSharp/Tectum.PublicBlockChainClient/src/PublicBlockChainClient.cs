@@ -70,12 +70,6 @@ public class PublicBlockChainClient : BaseHttpClient, IPublicBlockChainClient
         return GetAsync<GetCoinsTransfersResponse>("coins/transfers/user", param, cancellationToken);
     }
 
-    public Task<GetCoinsTransferFeeResponse?> GetCoinTransferFeeAsync(CancellationToken cancellationToken = default)
-    {
-        return GetAsync<GetCoinsTransferFeeResponse>("coins/transfers/fee", new Dictionary<string, string>(),
-            cancellationToken);
-    }
-
     public Task<GetBlocksCountResponse?> GetBlocksCountAsync(CancellationToken cancellationToken = default)
     {
         return GetAsync<GetBlocksCountResponse>("blockscount", null, cancellationToken);

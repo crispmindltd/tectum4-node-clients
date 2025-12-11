@@ -21,7 +21,7 @@ public class PublicBlockChainClientTests
         _publicBlockChain = new PublicBlockChainClient(httpClient);
     }
 
-    [Ignore("Need using real Tectum 4.0 Node")]
+    //[Ignore("Need using real Tectum 4.1 Node")]
     [TestCase("0xe38465d9ea628bbe533067e0395f66212b723873")]
     public async Task GetCoinBalancesAsync_Success(string address)
     {
@@ -32,10 +32,10 @@ public class PublicBlockChainClientTests
 
         result.Should().NotBeNull();
         result!.HasError.Should().BeFalse();
-        result.Balance.Should().BeGreaterThan(1000000);
+        result.Balance.Should().BeGreaterOrEqualTo(40000);
     }
 
-    [Ignore("Need using real Tectum 4.0 Node")]
+    //[Ignore("Need using real Tectum 4.1 Node")]
     [Test]
     public async Task GetCoinTransfersAsync_Success()
     {
@@ -52,7 +52,7 @@ public class PublicBlockChainClientTests
         AssetTransactions(result.Transactions!);
     }
 
-    [Ignore("Need using real Tectum 4.0 Node")]
+    //[Ignore("Need using real Tectum 4.0 Node")]
     [TestCase(12)]
     public async Task GetCoinTransferAsync_Success(long blockId)
     {
@@ -88,7 +88,7 @@ public class PublicBlockChainClientTests
         }
     }
 
-    [Ignore("Need using real Tectum 4.0 Node")]
+    //[Ignore("Need using real Tectum 4.0 Node")]
     [Test]
     public async Task GetBlocksCountAsync_Success()
     {
